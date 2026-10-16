@@ -1,4 +1,4 @@
-# 💪 Apna AI Coach — Real-Time AI Gym Coach
+# 💪 Apna AI Coach - Real-Time AI Gym Coach
 
 > **Full perception-to-reasoning-to-voice pipeline**: live webcam → pose detection → rep counting → LLM coaching → voice feedback, all in-browser.
 

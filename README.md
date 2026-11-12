@@ -19,7 +19,7 @@
 
 ## Demo Preview
 
-*(GIF showing webcam feed with skeleton overlay + rep counter — captured from Streamlit Cloud after deploy)*
+![Apna AI Coach Live Demo](assets/demo.gif)
 
 ---
 

@@ -1,0 +1,4 @@
+# Optional heavy dependencies for local LLaVA VLM form analysis (llava-hf/llava-1.5-7b-hf)
+torch>=2.2.0
+transformers>=4.45.0
+accelerate>=0.30.0

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.env
+models/*.task
+tests/evaluation/test_videos/*.mp4
+tests/evaluation/test_videos/*.webm
+*.mp3
+*.wav
+.DS_Store

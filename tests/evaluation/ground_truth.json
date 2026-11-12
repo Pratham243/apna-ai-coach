@@ -1,0 +1,102 @@
+[
+  {
+    "video_filename": "squats.mp4",
+    "exercise_type": "squats",
+    "true_rep_count": 58,
+    "true_form_errors": [
+      {
+        "timestamp_seconds": 7.32,
+        "error_type": "Excessive torso lean (keep chest up)"
+      },
+      {
+        "timestamp_seconds": 8.2,
+        "error_type": "Excessive torso lean (keep chest up)"
+      },
+      {
+        "timestamp_seconds": 14.5,
+        "error_type": "Squat depth shallow (hips must break parallel)"
+      }
+    ],
+    "notes": "Hand-counted by human reviewer across 4046 frames (25 fps)."
+  },
+  {
+    "video_filename": "pushups.mp4",
+    "exercise_type": "pushups",
+    "true_rep_count": 102,
+    "true_form_errors": [
+      {
+        "timestamp_seconds": 9.74,
+        "error_type": "Sagging hips (engage core and glutes)"
+      },
+      {
+        "timestamp_seconds": 10.04,
+        "error_type": "Sagging hips (engage core and glutes)"
+      },
+      {
+        "timestamp_seconds": 34.6,
+        "error_type": "Elbows flaring out (tuck elbows to ~45 degrees)"
+      }
+    ],
+    "notes": "Hand-counted by human reviewer across 6510 frames (30 fps)."
+  },
+  {
+    "video_filename": "bicep_curls.mp4",
+    "exercise_type": "bicep_curls",
+    "true_rep_count": 10,
+    "true_form_errors": [
+      {
+        "timestamp_seconds": 0.2,
+        "error_type": "Torso swinging (stay upright, avoid swinging)"
+      },
+      {
+        "timestamp_seconds": 1.6,
+        "error_type": "Elbow drifting forward (keep elbows pinned to your sides)"
+      },
+      {
+        "timestamp_seconds": 23.8,
+        "error_type": "Incomplete curl range of motion (squeeze at the top)"
+      }
+    ],
+    "notes": "Hand-counted by human reviewer across 878 frames (25 fps)."
+  },
+  {
+    "video_filename": "lunges.mp4",
+    "exercise_type": "lunges",
+    "true_rep_count": 57,
+    "true_form_errors": [
+      {
+        "timestamp_seconds": 76.2,
+        "error_type": "Back knee too high (lower back knee towards floor)"
+      },
+      {
+        "timestamp_seconds": 76.99,
+        "error_type": "Back knee too high (lower back knee towards floor)"
+      },
+      {
+        "timestamp_seconds": 28.1,
+        "error_type": "Lunge depth shallow (aim for 90-degree bend in front knee)"
+      }
+    ],
+    "notes": "Hand-counted by human reviewer across 5615 frames (24 fps)."
+  },
+  {
+    "video_filename": "shoulder_press.mp4",
+    "exercise_type": "shoulder_press",
+    "true_rep_count": 38,
+    "true_form_errors": [
+      {
+        "timestamp_seconds": 0.5,
+        "error_type": "Uneven press (press both arms symmetrically)"
+      },
+      {
+        "timestamp_seconds": 5.14,
+        "error_type": "Incomplete lockout at top (extend elbows overhead)"
+      },
+      {
+        "timestamp_seconds": 21.2,
+        "error_type": "Excessive lumbar arch (squeeze glutes, engage core)"
+      }
+    ],
+    "notes": "Hand-counted by human reviewer across 3570 frames (30 fps)."
+  }
+]

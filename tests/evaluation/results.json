@@ -1,0 +1,143 @@
+{
+  "timestamp_utc": "2026-11-12T20:33:21Z",
+  "videos_evaluated": 5,
+  "total_frames_processed": 20619,
+  "overall_metrics": {
+    "mean_rep_accuracy_pct": 91.05,
+    "mean_keypoint_detection_rate_pct": 91.35,
+    "mean_form_precision": 0.0521,
+    "mean_form_recall": 0.7333,
+    "mean_form_f1": 0.0932,
+    "latency_ms": {
+      "mean_p50": 63.4,
+      "mean_p95": 83.5
+    }
+  },
+  "per_video_results": [
+    {
+      "video_filename": "squats.mp4",
+      "exercise_type": "squats",
+      "total_video_frames": 4046,
+      "processed_frames": 4046,
+      "pose_detected_frames": 3624,
+      "keypoint_detection_rate_pct": 89.57,
+      "true_rep_count": 58,
+      "predicted_rep_count": 61,
+      "rep_count_error_rate": 0.0517,
+      "rep_count_accuracy_pct": 94.83,
+      "form_detection": {
+        "true_positives": 2,
+        "false_positives": 18,
+        "false_negatives": 1,
+        "precision": 0.1,
+        "recall": 0.6667,
+        "f1_score": 0.1739
+      },
+      "latency_ms": {
+        "p50": 28.18,
+        "p95": 75.02,
+        "mean": 41.33
+      }
+    },
+    {
+      "video_filename": "pushups.mp4",
+      "exercise_type": "pushups",
+      "total_video_frames": 6510,
+      "processed_frames": 6510,
+      "pose_detected_frames": 6196,
+      "keypoint_detection_rate_pct": 95.18,
+      "true_rep_count": 102,
+      "predicted_rep_count": 105,
+      "rep_count_error_rate": 0.0294,
+      "rep_count_accuracy_pct": 97.06,
+      "form_detection": {
+        "true_positives": 1,
+        "false_positives": 727,
+        "false_negatives": 2,
+        "precision": 0.0014,
+        "recall": 0.3333,
+        "f1_score": 0.0027
+      },
+      "latency_ms": {
+        "p50": 71.97,
+        "p95": 85.4,
+        "mean": 73.89
+      }
+    },
+    {
+      "video_filename": "bicep_curls.mp4",
+      "exercise_type": "bicep_curls",
+      "total_video_frames": 878,
+      "processed_frames": 878,
+      "pose_detected_frames": 850,
+      "keypoint_detection_rate_pct": 96.81,
+      "true_rep_count": 10,
+      "predicted_rep_count": 12,
+      "rep_count_error_rate": 0.2,
+      "rep_count_accuracy_pct": 80.0,
+      "form_detection": {
+        "true_positives": 3,
+        "false_positives": 22,
+        "false_negatives": 0,
+        "precision": 0.12,
+        "recall": 1.0,
+        "f1_score": 0.2143
+      },
+      "latency_ms": {
+        "p50": 73.83,
+        "p95": 83.15,
+        "mean": 75.51
+      }
+    },
+    {
+      "video_filename": "lunges.mp4",
+      "exercise_type": "lunges",
+      "total_video_frames": 5615,
+      "processed_frames": 5615,
+      "pose_detected_frames": 4694,
+      "keypoint_detection_rate_pct": 83.6,
+      "true_rep_count": 57,
+      "predicted_rep_count": 62,
+      "rep_count_error_rate": 0.0877,
+      "rep_count_accuracy_pct": 91.23,
+      "form_detection": {
+        "true_positives": 2,
+        "false_positives": 63,
+        "false_negatives": 1,
+        "precision": 0.0308,
+        "recall": 0.6667,
+        "f1_score": 0.0588
+      },
+      "latency_ms": {
+        "p50": 72.34,
+        "p95": 90.24,
+        "mean": 74.36
+      }
+    },
+    {
+      "video_filename": "shoulder_press.mp4",
+      "exercise_type": "shoulder_press",
+      "total_video_frames": 3570,
+      "processed_frames": 3570,
+      "pose_detected_frames": 3269,
+      "keypoint_detection_rate_pct": 91.57,
+      "true_rep_count": 38,
+      "predicted_rep_count": 41,
+      "rep_count_error_rate": 0.0789,
+      "rep_count_accuracy_pct": 92.11,
+      "form_detection": {
+        "true_positives": 3,
+        "false_positives": 366,
+        "false_negatives": 0,
+        "precision": 0.0081,
+        "recall": 1.0,
+        "f1_score": 0.0161
+      },
+      "latency_ms": {
+        "p50": 70.68,
+        "p95": 83.69,
+        "mean": 71.24
+      }
+    }
+  ]
+}

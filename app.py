@@ -35,12 +35,30 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("apna-ai-coach")
 
-# WebRTC STUN server configuration for Streamlit Cloud deployment
+# WebRTC ICE server configuration for Streamlit Cloud deployment.
+# STUN alone fails on CGNAT / strict home ISPs (common in Germany).
+# Open Relay Project provides free public TURN relays (metered.ca) that
+# fall back to TCP/443, which bypasses most residential NAT restrictions.
 RTC_CONFIGURATION = RTCConfiguration(
     {
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
             {"urls": ["stun:stun1.l.google.com:19302"]},
+            {
+                "urls": ["turn:openrelay.metered.ca:80"],
+                "username": "openrelayproject",
+                "credential": "openrelayproject",
+            },
+            {
+                "urls": ["turn:openrelay.metered.ca:443"],
+                "username": "openrelayproject",
+                "credential": "openrelayproject",
+            },
+            {
+                "urls": ["turn:openrelay.metered.ca:443?transport=tcp"],
+                "username": "openrelayproject",
+                "credential": "openrelayproject",
+            },
         ]
     }
 )

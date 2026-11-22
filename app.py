@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import collections
 import logging
+import os
 import threading
 import time
 
@@ -37,27 +38,41 @@ logger = logging.getLogger("apna-ai-coach")
 
 # WebRTC ICE server configuration for Streamlit Cloud deployment.
 # STUN alone fails on CGNAT / strict home ISPs (common in Germany).
-# Open Relay Project provides free public TURN relays (metered.ca) that
-# fall back to TCP/443, which bypasses most residential NAT restrictions.
+# Metered.ca provides TURN relays that fall back to TCP/443, which
+# bypasses most residential NAT restrictions and corporate firewalls.
+# Credentials are read from Streamlit secrets so they can be rotated
+# without a code change; the hard-coded fallback keeps the demo usable
+# if the secret is not set.
+_METERED_USERNAME = os.getenv("METERED_TURN_USERNAME", "dacd4addcb4418a87a351b47")
+_METERED_CREDENTIAL = os.getenv("METERED_TURN_CREDENTIAL", "uD4K1QWrp/JyxvqF")
+
 RTC_CONFIGURATION = RTCConfiguration(
     {
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
             {"urls": ["stun:stun1.l.google.com:19302"]},
             {
-                "urls": ["turn:openrelay.metered.ca:80"],
-                "username": "openrelayproject",
-                "credential": "openrelayproject",
+                "urls": ["stun:a.relay.metered.ca:80"],
             },
             {
-                "urls": ["turn:openrelay.metered.ca:443"],
-                "username": "openrelayproject",
-                "credential": "openrelayproject",
+                "urls": ["turn:a.relay.metered.ca:80"],
+                "username": _METERED_USERNAME,
+                "credential": _METERED_CREDENTIAL,
             },
             {
-                "urls": ["turn:openrelay.metered.ca:443?transport=tcp"],
-                "username": "openrelayproject",
-                "credential": "openrelayproject",
+                "urls": ["turn:a.relay.metered.ca:80?transport=tcp"],
+                "username": _METERED_USERNAME,
+                "credential": _METERED_CREDENTIAL,
+            },
+            {
+                "urls": ["turn:a.relay.metered.ca:443"],
+                "username": _METERED_USERNAME,
+                "credential": _METERED_CREDENTIAL,
+            },
+            {
+                "urls": ["turns:a.relay.metered.ca:443?transport=tcp"],
+                "username": _METERED_USERNAME,
+                "credential": _METERED_CREDENTIAL,
             },
         ]
     }
